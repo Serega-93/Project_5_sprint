@@ -1,4 +1,4 @@
 class Account:
 
-    email = 'serega20@ya.ru'
-    password = '555555'
+    email = 'serega20fs@ya.ru'
+    password = 'a123b21m57bv4'
