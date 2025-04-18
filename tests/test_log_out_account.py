@@ -17,4 +17,5 @@ class TestLogOutAccount:
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.EXIT_BUTTON))
         driver.find_element(*Locators.EXIT_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.LOGIN_BUTTON)).text
-        assert text == 'Войти' # кнопка Войти на форме авторизации после выхода из аккаунта
+        expected_texts = {'LOGIN_BUTTON': 'Войти'}
+        assert text == expected_texts['LOGIN_BUTTON'] # кнопка Войти на форме авторизации после выхода из аккаунта

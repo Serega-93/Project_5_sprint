@@ -23,7 +23,8 @@ class TestRegistrationWithNewData:
         driver.find_element(*Locators.LOGIN_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located
                                                          (Locators.PLACE_ORDER_BUTTON)).text
-        assert text == 'Оформить заказ' # кнопка 'Оформить заказ' доступна только зарегистрированному пользователю
+        expected_texts = {'PLACE_ORDER_BUTTON': 'Оформить заказ'}
+        assert text == expected_texts['PLACE_ORDER_BUTTON'] # кнопка 'Оформить заказ' доступна только зарегистрированному пользователю
 
     def test_invalid_password_error(self, driver):
         name, email, password = generate_registration_data()
@@ -37,4 +38,5 @@ class TestRegistrationWithNewData:
         driver.find_element(*Locators.REGISTER_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located
                                               (Locators.ERROR_PASSWORD)).text
-        assert text == 'Некорректный пароль'
+        expected_texts = {'ERROR_PASSWORD': 'Некорректный пароль'}
+        assert text == expected_texts['ERROR_PASSWORD'] # сообщение об ошибки
