@@ -14,7 +14,7 @@ class TestlogInToYourAccount:
         driver.find_element(*Locators.LOGIN_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located
                                               (Locators.PLACE_ORDER_BUTTON)).text
-        assert text == 'Оформить заказ'
+        assert text == 'Оформить заказ' # кнопка 'Оформить заказ' доступна только зарегистрированному пользователю
 
     def test_log_in_using_the_personal_account_button(self, driver): # вход через кнопку «Личный кабинет»
         driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
@@ -24,7 +24,7 @@ class TestlogInToYourAccount:
         driver.find_element(*Locators.LOGIN_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located
                                               (Locators.PLACE_ORDER_BUTTON)).text
-        assert text == 'Оформить заказ'
+        assert text == 'Оформить заказ' # кнопка 'Оформить заказ' доступна только зарегистрированному пользователю
 
     def test_log_in_via_the_button_in_the_registration_form(self, driver): # вход через кнопку в форме регистрации
         driver.find_element(*Locators.SIGN_ACCOUNT_BUTTON).click()
@@ -38,7 +38,7 @@ class TestlogInToYourAccount:
         driver.find_element(*Locators.LOGIN_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located
                                               (Locators.PLACE_ORDER_BUTTON)).text
-        assert text == 'Оформить заказ'
+        assert text == 'Оформить заказ' # кнопка 'Оформить заказ' доступна только зарегистрированному пользователю
 
     def test_login_via_a_button_in_the_password_recovery_form(self, driver): # вход через кнопку в форме восстановления пароля
         driver.find_element(*Locators.SIGN_ACCOUNT_BUTTON).click()
@@ -52,4 +52,4 @@ class TestlogInToYourAccount:
         driver.find_element(*Locators.LOGIN_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located
                                               (Locators.PLACE_ORDER_BUTTON)).text
-        assert text == 'Оформить заказ'
+        assert text == 'Оформить заказ' # кнопка 'Оформить заказ' доступна только зарегистрированному пользователю

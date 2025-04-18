@@ -15,7 +15,7 @@ class Locators:
     REGISTER_SECTION = By.XPATH, '//a[@class="Auth_link__1fOlj" and text()="Зарегистрироваться"]' # раздел 'зарегистрироваться'
     RESTORE_PASSWORD_SECTION = By.XPATH, '//a[@class="Auth_link__1fOlj" and text()="Восстановить пароль"]' # раздел 'восстановить пароль'
     CONSTRUCTOR_SECTION = By.XPATH, '//p[text()="Конструктор"]' # раздел 'Конструктор'
-    STELLAR_BURGERS_LOGO = By.XPATH, '//a[@class="active"]' # переход по логотипу 'Stellar Burgers'
+    STELLAR_BURGERS_LOGO = By.XPATH, '//div[@class="AppHeader_header__logo__2D0X2"]/a' # переход по логотипу 'Stellar Burgers'
     ROLLS_SECTION = By.XPATH, '//span[text()="Булки"]' # раздел 'Булки'
     SAUCES_SECTION = By.XPATH, '//span[text()="Соусы"]' # раздел 'Соусы'
     FILLING_SECTION = By.XPATH, '//span[text()="Начинки"]' # раздел 'Начинки'
@@ -24,3 +24,6 @@ class Locators:
     SAVE_BUTTON = By.XPATH, '//button[text()="Сохранить"]' # кнопка 'Сохранить' в личном кабинете
     PLACE_ORDER_BUTTON = By.XPATH, '// button[text() = "Оформить заказ"]' # кнопка 'Оформить заказ'
     LOGIN_LINKS = By.XPATH, '//a[@class ="Auth_link__1fOlj"]' # ссылка 'Войти'
+    ROLLS = By.XPATH, '//p[text() = "Флюоресцентная булка R2-D3"]' # булка доступная в разделе Булки
+    SAUCES = By.XPATH, '//p[text() = "Соус с шипами Антарианского плоскоходца"]' # соус доступный в разделе Соусы
+    FILLING = By.XPATH, '//p[text() = "Филе Люминесцентного тетраодонтимформа"]' # начинка доступная в разделе Начинки
