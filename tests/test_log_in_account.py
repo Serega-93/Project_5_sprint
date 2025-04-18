@@ -9,7 +9,7 @@ class TestlogInToYourAccount:
     def test_log_in_using_the_log_in_to_account_button(self, driver): # вход по кнопке «Войти в аккаунт» на главной
         driver.find_element(*Locators.SIGN_ACCOUNT_BUTTON).click()
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.LOGIN_BUTTON))
-        driver.find_element(*Locators.EMAIL_FIELD_AUTH).send_keys(Account.email)
+        driver.find_element(*Locators.EMAIL_FIELD).send_keys(Account.email)
         driver.find_element(*Locators.PASSWORD_FIELD).send_keys(Account.password)
         driver.find_element(*Locators.LOGIN_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located
@@ -19,7 +19,7 @@ class TestlogInToYourAccount:
     def test_log_in_using_the_personal_account_button(self, driver): # вход через кнопку «Личный кабинет»
         driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.LOGIN_BUTTON))
-        driver.find_element(*Locators.EMAIL_FIELD_AUTH).send_keys(Account.email)
+        driver.find_element(*Locators.EMAIL_FIELD).send_keys(Account.email)
         driver.find_element(*Locators.PASSWORD_FIELD).send_keys(Account.password)
         driver.find_element(*Locators.LOGIN_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located
@@ -33,7 +33,7 @@ class TestlogInToYourAccount:
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.REGISTER_BUTTON))
         driver.find_element(*Locators.LOGIN_LINKS).click()
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.LOGIN_BUTTON))
-        driver.find_element(*Locators.EMAIL_FIELD_AUTH).send_keys(Account.email)
+        driver.find_element(*Locators.EMAIL_FIELD).send_keys(Account.email)
         driver.find_element(*Locators.PASSWORD_FIELD).send_keys(Account.password)
         driver.find_element(*Locators.LOGIN_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located
@@ -47,7 +47,7 @@ class TestlogInToYourAccount:
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.LOGIN_LINKS))
         driver.find_element(*Locators.LOGIN_LINKS).click()
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.LOGIN_BUTTON))
-        driver.find_element(*Locators.EMAIL_FIELD_AUTH).send_keys(Account.email)
+        driver.find_element(*Locators.EMAIL_FIELD).send_keys(Account.email)
         driver.find_element(*Locators.PASSWORD_FIELD).send_keys(Account.password)
         driver.find_element(*Locators.LOGIN_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located

@@ -8,10 +8,9 @@ class Locators:
     REGISTER_BUTTON = By.XPATH, '//button[text()="Зарегистрироваться"]' # кнопка 'Зарегистрироваться'
     RESTORE_BUTTON = By.XPATH, "//button[text()='Восстановить']" # кнопка 'Восстановить'
     LOGIN_BUTTON = By.XPATH, '//button[text()="Войти"]' # кнопка 'Войти'
-    NAME_FIELD = By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div/input' # поле 'имя'
-    EMAIL_FIELD_REG = By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[2]/div/div/input' # поле 'email'(регистрация)
+    NAME_FIELD = By.XPATH, '//div[label[contains(text(),"Имя")]]//input' # поле 'имя'
+    EMAIL_FIELD = By.XPATH, '//div[label[contains(text(),"Email")]]//input' # поле 'email'
     PASSWORD_FIELD = By.XPATH, '//input[@name="Пароль"]' # поле 'пароль'
-    EMAIL_FIELD_AUTH = By.XPATH, '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div/input' # поле 'email'(авторизация)
     REGISTER_SECTION = By.XPATH, '//a[@class="Auth_link__1fOlj" and text()="Зарегистрироваться"]' # раздел 'зарегистрироваться'
     RESTORE_PASSWORD_SECTION = By.XPATH, '//a[@class="Auth_link__1fOlj" and text()="Восстановить пароль"]' # раздел 'восстановить пароль'
     CONSTRUCTOR_SECTION = By.XPATH, '//p[text()="Конструктор"]' # раздел 'Конструктор'

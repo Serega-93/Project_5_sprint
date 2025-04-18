@@ -9,7 +9,7 @@ class TestLogOutAccount:
     def test_Log_out_account_using_the_log_out_button_in_personal_account(self, driver): # выход по кнопке «Выйти» в личном кабинете
         driver.find_element(*Locators.SIGN_ACCOUNT_BUTTON).click()
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.LOGIN_BUTTON))
-        driver.find_element(*Locators.EMAIL_FIELD_AUTH).send_keys(Account.email)
+        driver.find_element(*Locators.EMAIL_FIELD).send_keys(Account.email)
         driver.find_element(*Locators.PASSWORD_FIELD).send_keys(Account.password)
         driver.find_element(*Locators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.PERSONAL_ACCOUNT_BUTTON))

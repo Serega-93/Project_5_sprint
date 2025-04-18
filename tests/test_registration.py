@@ -14,11 +14,11 @@ class TestRegistrationWithNewData:
         driver.find_element(*Locators.REGISTER_SECTION).click()
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.REGISTER_BUTTON))
         driver.find_element(*Locators.NAME_FIELD).send_keys(name)
-        driver.find_element(*Locators.EMAIL_FIELD_REG).send_keys(email)
+        driver.find_element(*Locators.EMAIL_FIELD).send_keys(email)
         driver.find_element(*Locators.PASSWORD_FIELD).send_keys(password)
         driver.find_element(*Locators.REGISTER_BUTTON).click()
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.LOGIN_BUTTON))
-        driver.find_element(*Locators.EMAIL_FIELD_AUTH).send_keys(email)
+        driver.find_element(*Locators.EMAIL_FIELD).send_keys(email)
         driver.find_element(*Locators.PASSWORD_FIELD).send_keys(password)
         driver.find_element(*Locators.LOGIN_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located
@@ -32,7 +32,7 @@ class TestRegistrationWithNewData:
         driver.find_element(*Locators.REGISTER_SECTION).click()
         WebDriverWait(driver, 5).until(EC.visibility_of_element_located(Locators.REGISTER_BUTTON))
         driver.find_element(*Locators.NAME_FIELD).send_keys(name)
-        driver.find_element(*Locators.EMAIL_FIELD_REG).send_keys(email)
+        driver.find_element(*Locators.EMAIL_FIELD).send_keys(email)
         driver.find_element(*Locators.PASSWORD_FIELD).send_keys('1')
         driver.find_element(*Locators.REGISTER_BUTTON).click()
         text = WebDriverWait(driver, 5).until(EC.visibility_of_element_located
