@@ -1,6 +1,6 @@
-selenium~=4.27.1
-pytest~=8.3.3
+selenium
+pytest
 webdriver_manager
-faker~=33.1.0
+faker
 allure-pytest
-requests~=2.32.3
+requests
